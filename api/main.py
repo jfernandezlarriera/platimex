@@ -18,7 +18,7 @@ def getall():
     try:
         conn = pymysql.connect(**config)
         cursor = conn.cursor()
-        cursor.execute('SELECT name, lastname, phone, email, age, DATE(customers.registration_date) AS registration_date, genders.gender, status.status, street, city, state, code, country, additional FROM customers LEFT JOIN genders USING(id_gender) LEFT JOIN status USING(id_status)')
+        cursor.execute('SELECT name, lastname, phone, email, age, CONCAT("Registrado el día: ", DATE(customers.registration_date)) AS registration_date, genders.gender, status.status, street, city, state, code, country, additional FROM customers LEFT JOIN genders USING(id_gender) LEFT JOIN status USING(id_status)')
         rows = cursor.fetchall()
         cursor.close() 
         conn.close()
