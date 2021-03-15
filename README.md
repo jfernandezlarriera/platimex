@@ -1,5 +1,8 @@
 # platimex
 
+## Requerimientos
+[Ver archivo](https://github.com/jfernandezlarriera/platimex/blob/master/Platimex.pdf)
+
 ## Requesitos
 
 * Docker
